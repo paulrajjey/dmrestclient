@@ -25,17 +25,15 @@ import org.kie.server.client.KieServicesConfiguration;
 import org.kie.server.client.KieServicesFactory;
 import org.kie.server.client.RuleServicesClient;
 
-import com.bell.belldemo.BellApp;
-import com.idexx.idexxdemo.ValidationDomain;
 
 
 
-public class IdxRestClient {
+public class DMRestClient {
 	
 	
 	public static void main(String[] s){
 		
-		IdxRestClient el = new IdxRestClient();
+		DMRestClient el = new DMRestClient();
 		el.execute();
 	        
 	}
@@ -45,21 +43,21 @@ public class IdxRestClient {
 	     
 	       String password = "jboss123$";
 	       String containerId = "idexxdemo";
-	        KieServicesClient  kieServicesClient = IdxRestClient.configure(serverUrl, user, password);
+	        KieServicesClient  kieServicesClient = DMRestClient.configure(serverUrl, user, password);
 
 		 RuleServicesClient ruleClient = kieServicesClient.getServicesClient(RuleServicesClient.class);
 	        KieCommands commandsFactory =
 	         		KieServices.Factory.get().getCommands();
 	       
 	        
-	        ValidationDomain valid = new ValidationDomain();
-	        valid.setAssayCode("CREA");
+	       //ValidationDomain valid = new ValidationDomain();
+	       // valid.setAssayCode("CREA");
 	       // valid.setAssayCode("SDMA");
-	        valid.setAnimalGroup("CANINE");
-	        valid.setValue(44.0);
+	      //  valid.setAnimalGroup("CANINE");
+	       // valid.setValue(44.0);
 	        
 	      //Command<?> startEmp =  commandsFactory.newStartProcess("belldemo.techservice", param);
-	        Command<?> insertEmp = commandsFactory.newInsert(valid, "output");
+	        Command<?> insertEmp = commandsFactory.newInsert(null, "output");
 	        Command<?> dispose  = commandsFactory.newDispose();
 	        Command<?> fireAllRules = commandsFactory.newFireAllRules();
 	        Command<?> batchCommand =
