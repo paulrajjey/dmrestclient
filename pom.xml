@@ -1,0 +1,232 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.brms</groupId>
+  <artifactId>brms7.2-restclient</artifactId>
+  <version>1.0</version>
+  <!--  version>6.3.0.Final-redhat-5</version-->
+  <!--  <version>6.2.0.Final-redhat-11</version>-->
+  <properties>
+    <!-- jbpm.version>7.14.0.Final-redhat-00002</jbpm.version -->
+    <!-- <jbpm.version>7.5.0.Final-redhat-4</jbpm.version>-->
+    <jbpm.version>7.23.0.Final-redhat-00002</jbpm.version>
+    
+    <!-- <version>7.4.0.Final-redhat-2</version> -->
+    <!-- use utf-8 encoding -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+  
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.drools</groupId>
+        <artifactId>drools-bom</artifactId>
+        <type>pom</type>
+        <version>${jbpm.version}</version>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-bom</artifactId>
+        <type>pom</type>
+	<version>${jbpm.version}</version>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  
+  <dependencies>
+    <dependency>
+        <groupId>org.kie</groupId>
+        <artifactId>kie-internal</artifactId>
+       <version>${jbpm.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-client</artifactId>
+        <version>${jbpm.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-api</artifactId>
+        <version>${jbpm.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.drools</groupId>
+      <artifactId>drools-core</artifactId>
+       <version>${jbpm.version}</version>
+      <!--  scope>provided</scope-->
+    </dependency> 
+   <dependency>
+        <groupId>org.drools</groupId>
+        <artifactId>drools-compiler</artifactId>
+        <version>${jbpm.version}</version>
+    </dependency>
+     <dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-internal</artifactId>
+			<version>${jbpm.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-ci</artifactId>
+		<version>${jbpm.version}</version>	
+		</dependency>
+		<dependency>
+    <groupId>org.kie</groupId>
+    <artifactId>kie-dmn-core</artifactId>
+    <version>${jbpm.version}</version>	
+</dependency>
+
+	<dependency>
+	<groupId>org.kie</groupId>
+    <artifactId>kie-dmn-api</artifactId>
+     <version>${jbpm.version}</version>
+     </dependency>	
+		<dependency>
+	<groupId>org.drools</groupId>
+	<artifactId>drools-decisiontables</artifactId>
+	<version>${jbpm.version}</version>
+	</dependency>
+	
+	
+	<dependency>
+	<groupId>org.drools</groupId>
+	<artifactId>drools-workbench-models-datamodel-api</artifactId>
+	<version>${jbpm.version}</version>
+</dependency>
+<dependency>
+      <groupId>org.drools</groupId>
+      <artifactId>drools-decisiontables</artifactId>
+      <version>${jbpm.version}</version>	
+    </dependency>
+    <dependency>
+	<groupId>org.drools</groupId>
+	<artifactId>drools-workbench-models-commons</artifactId>
+	 <version>${jbpm.version}</version>	
+</dependency>
+    <dependency>
+	<groupId>org.drools</groupId>
+	<artifactId>drools-workbench-models-guided-dtable</artifactId>
+	 <version>${jbpm.version}</version>	
+</dependency>
+<dependency>
+            <groupId>org.jbpm</groupId>
+            <artifactId>jbpm-human-task-core</artifactId>
+            <version>${jbpm.version}</version>
+            <scope>provided</scope>
+ </dependency>
+ <dependency>
+    <groupId>org.jbpm</groupId>
+    <artifactId>jbpm-bpmn2</artifactId>
+    <version>${jbpm.version}</version>
+</dependency>
+	
+        <dependency>
+            <groupId>org.jbpm</groupId>
+            <artifactId>jbpm-human-task-core</artifactId>
+           <version>${jbpm.version}</version>
+        </dependency>
+        <dependency>
+     	 <groupId>org.kie</groupId>
+      		<artifactId>kie-api</artifactId>
+      	<version>${jbpm.version}</version>
+      </dependency>  
+      <dependency>
+     	<groupId>org.jboss.as</groupId> 
+     	<artifactId>jboss-as-jms-client-bom</artifactId> 
+     	<!-- <version>7.5.7.Final-redhat-3</version> -->
+     	<version>7.1.1.Final</version>
+      	<type>pom</type>
+      </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.codehaus.jettison/jettison -->
+<dependency>
+    <groupId>org.codehaus.jettison</groupId>
+    <artifactId>jettison</artifactId>
+    <version>1.3</version>
+</dependency>
+    
+	  <dependency>
+	 <groupId>org.drools</groupId>
+	 <artifactId>drools-workbench-models-guided-scorecard</artifactId>
+	 <version>${jbpm.version}</version>	
+	 </dependency>
+	 <!-- dependency>
+	 <groupId>org.drools</groupId>
+	 <artifactId>kie-pmml</artifactId>
+	   <version>7.7.0.Final-redhat-10</version>
+	 </dependency> -->
+	 <!-- https://mvnrepository.com/artifact/org.jbpm/jbpm-flow-builder -->
+<dependency>
+    <groupId>org.jbpm</groupId>
+    <artifactId>jbpm-flow-builder</artifactId>
+<version>${jbpm.version}</version>	
+</dependency>
+	 
+	<!-- https://mvnrepository.com/artifact/org.kie.soup/kie-soup-maven-support -->
+<dependency>
+    <groupId>org.kie.soup</groupId>
+    <artifactId>kie-soup-maven-support</artifactId>
+    <version>${jbpm.version}</version>
+</dependency>
+<!-- dependency>
+        <groupId>pl.maciejwalkowiak</groupId>
+        <artifactId>junit-drools</artifactId>
+<version>1.0</version>
+        <scope>test</scope>
+    </dependency-->
+
+<dependency>
+    <groupId>mortgages </groupId>
+    <artifactId>mortgages</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+</dependency>
+	<!-- dependency>
+    <groupId>xstream</groupId>
+    <artifactId>xstream</artifactId>
+    <version>1.2.2</version>
+</dependency -->
+	<dependency>
+    <groupId>com.thoughtworks.xstream</groupId>
+    <artifactId>xstream</artifactId>
+    <version>1.4.10</version>
+</dependency>
+<!-- <dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.8.9</version>
+</dependency>
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+  <artifactId>jackson-annotations</artifactId>
+  <version>2.8.9</version>
+</dependency>  -->
+<!--  <dependency>
+<groupId>com.ncl</groupId>
+<artifactId>promotion</artifactId>
+<version>1.0.0</version>
+</dependency> -->
+
+<!-- 
+<dependency>
+     <groupId>org.slf4j</groupId>
+     <artifactId>slf4j-api</artifactId>
+     <version>1.7.2</version>
+   </dependency>
+   
+<dependency>
+    <groupId>com.thoughtworks.xstream</groupId>
+    <artifactId>xstream</artifactId>
+    <version>1.4.11.1</version>
+</dependency>
+ -->
+
+  </dependencies>
+</project> 
