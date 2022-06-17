@@ -8,7 +8,7 @@
   <properties>
     <!-- jbpm.version>7.14.0.Final-redhat-00002</jbpm.version -->
     <!-- <jbpm.version>7.5.0.Final-redhat-4</jbpm.version>-->
-    <jbpm.version>7.23.0.Final-redhat-00002</jbpm.version>
+    <jbpm.version>7.60.0.Final</jbpm.version>
     
     <!-- <version>7.4.0.Final-redhat-2</version> -->
     <!-- use utf-8 encoding -->
